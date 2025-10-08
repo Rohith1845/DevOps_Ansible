@@ -4,9 +4,12 @@
   vars_prompt:
   - name: "USERNAME"
     prompt: "Enter the username"
+    private: false
+  - name: "PASSWORD"
+    prompt: "Enter the username"
     private: true
   tasks:
   - name: print prompt variables
     ansible.builtin.debug:
-      msg: "The username is {{ USERNAME }}"
+      msg: "The username is {{ USERNAME }} and password is {{ PASSWORD }}"
   
