@@ -1,10 +1,8 @@
 - name: play level variables
   hosts: local
   connection: local
-  vars:
-    COURSE: DevSecOps
-    DURATION: 10hrs
-    STUDENT: Rohith
+  vars_files:
+  - course.yaml
   tasks:
   - name: print course info
     ansible.builtin.debug:
