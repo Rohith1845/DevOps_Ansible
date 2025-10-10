@@ -10,7 +10,7 @@
     listtags:
     - key: application
       value: Rohith
-    - key: application
+    - key: enviroment
       value: rohith
   tasks:
   - name: print functions
