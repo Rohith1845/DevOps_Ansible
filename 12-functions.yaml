@@ -1,8 +1,7 @@
 - name: functions
   hosts: local
   connection: local
-  become: yes
   tasks:
   - name: print functions
     ansible.builtin.debug:
-      msg: "name is {{ name }}"
+      msg: "name is {{ name | default(Rohith) }}"
