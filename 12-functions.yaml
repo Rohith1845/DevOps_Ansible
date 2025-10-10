@@ -36,3 +36,8 @@
     ansible.builtin.debug:
       msg: " Json {{ rohith_yaml | to_json }}"
 
+  - name: save json to file
+    ansible.builtin.copy:
+      dest: ./rohith-json.data
+      content: "{{ rohith_yaml | to_nice_json }}"
+
