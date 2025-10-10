@@ -4,9 +4,9 @@
   vars:
     technologies: DevOps, ansible, linux, shell
   # dictionary == map
-  tags:
-    application: Rohith
-    domain: aws
+    tags:
+      application: Rohith
+      domain: aws
   tasks:
   - name: print functions
     ansible.builtin.debug:
