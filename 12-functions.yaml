@@ -12,6 +12,8 @@
       value: Rohith
     - key: enviroment
       value: rohith
+    name: rohith
+    gmail: KRISHNAMSETTYROHITH@GMAIL.COM
   tasks:
   - name: print functions
     ansible.builtin.debug:
@@ -40,4 +42,11 @@
     ansible.builtin.copy:
       dest: ./rohith-json.data
       content: "{{ rohith_yaml | to_nice_json }}"
+  
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "upper case is {{ name }}"
 
+  - name: convert upper to lower case
+    ansible.builtin.debug:
+      msg: "lower case is {{ gmail }}"
