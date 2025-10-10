@@ -1,7 +1,14 @@
 - name: functions
   hosts: local
   connection: local
+  vars:
+    technologies: DevOps, ansible, linux, shell
   tasks:
   - name: print functions
     ansible.builtin.debug:
       msg: "name is {{ name | default('Rohith') }}"
+  
+  - name: spilt
+    ansible.builtin.debug:
+      msg: "List is {{ technologies | split(',') }}"
+
