@@ -3,6 +3,10 @@
   connection: local
   vars:
     technologies: DevOps, ansible, linux, shell
+  # dictionary == map
+  tags:
+    application: Rohith
+    domain: aws
   tasks:
   - name: print functions
     ansible.builtin.debug:
@@ -11,4 +15,8 @@
   - name: spilt
     ansible.builtin.debug:
       msg: "List is {{ technologies | split(',') }}"
+
+  - name: convert map to List
+    ansible.builtin.debug:
+      msg: "Map list is {{ tags |  dict2items }}"
 
